@@ -5,11 +5,4 @@ class Input extends Elements {
         this.element.type = type;
     }
 
-    
-
-    // render() {
-    //     new Input(parent, id, className, type, placeholder, src, alt);
-    //     docID(id).placeholder = "text...";
-    //     docID(id).src = "./"; 
-    // }
 }

@@ -12,18 +12,24 @@
 }
 
 /* Group  */
+.Overview-Group {
+  border: 2px solid black;
+  height: fit-content;
+  padding: 8px;
+  background-color: #efefef;
+}
 
 .Overview-Group-matches {
   display: grid;
   grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  background-color: #efefef;
+  /* background-color: #efefef; */
   height: 150px;
 }
 
 .Group-table-con {
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
-  background-color: #efefef;
+  /* background-color: #efefef; */
   height: 150px;
 }
 

@@ -1,16 +1,28 @@
 class Group {
     constructor(nr) {
-        new Div("app", `Overview-Group-${nr}`, "Overview-group");
+        new Div("app", `Overview-Group-${nr}`, "Overview-Group");
         new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`)
         this.renderGroupMatches(nr);
         this.renderGroupTable(nr);
     }
 
     renderGroupMatches (nr) {
+        // this.renderGroupHeadline(`Overview-Group-${nr}-matches`);
         data.groups[nr].forEach((ele) => {
           new Match(`Overview-Group-${nr}-matches`, [ele - 1], teams, games[[ele - 1]]);
         });
       }
+    
+    renderGroupHeadline(parent) {
+        new Span(parent, `game-hl-home`, `game-home`, `${teams[game["homeTeam"] - 1].name}`);
+        new Span(parent, `game-minus${gameId}`, "game-minus", ":");
+        new Span(parent, `game-away${gameId}`, `game-away`, `${teams[game["awayTeam"] - 1].name}`);
+        new Span(parent, `game-result${gameId}`, "game-result", this.gameResult);
+        new Span(parent, `bet-kay${gameId}`,"bet-kay",game.tips.user1[0] === null ? "" : `${game.tips.user1[0]}:${game.tips.user1[1]}` );
+        new Span(parent, `bet-mina${gameId}`,"bet-mina", game.tips.user2[0] === null ? "" : `${game.tips.user2[0]}:${game.tips.user2[1]}` );
+        new Span(parent, `bet-stefan${gameId}`, "bet-stefan", game.tips.user3[0] === null ? "" : `${game.tips.user3[0]}:${game.tips.user3[1]}`);
+    }
+
 
     renderGroupTable(nr) {
         let teams = this.groupResults(nr);
