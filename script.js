@@ -5,6 +5,7 @@ function docID(id) {
 let data;
 let teams;
 let games;
+let logged = true;
 
 async function init() {
   data = await fetchdata();
@@ -13,13 +14,20 @@ async function init() {
   new UserResults(data);
   loadCss();
   new Div("body", "main", "main", "");
-  const keysArray = Object.keys(data.groups);
-  keysArray.forEach((ele) => new Group(ele, data) )
-  new Login();
+  if(logged){
+    new Div("main", "app", "app", "");
+    const keysArray = Object.keys(data.groups);
+    keysArray.forEach((ele) => new Group(ele, data) )
+  }else{
+    new Div("main", "login", "login", "");
+    new Login();
+  }
+  
 }
 
 function loadCss() {
   new Css("styles.css");
+  new Css("styles-login.css");
 }
 
 async function fetchdata() {

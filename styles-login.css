@@ -1,0 +1,18 @@
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+#Login-con {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  /* gap: 16px; */
+  width: 20%;
+  justify-content: center;
+  background-color: rgb(115, 115, 121);
+}
+
+.login-input{
+    margin-bottom: 16px;
+}
