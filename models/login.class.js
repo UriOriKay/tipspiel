@@ -7,10 +7,11 @@ class Login {
 
   renderSignIn() {
     new Div("login", "Login-con", "login-con")
-   this.createInputImgField("Login-con", "username", "Benutzername", "text", "./image/username");
-   this.createInputImgField("Login-con", "email", "Email", "email", "./image/username");
-   this.createInputImgField("Login-con", "password", "Passwort", "password", "./image/username");
-   this.createInputImgField("Login-con", "confirm-password", "Bestätige dein Passwort", "password", "./image/username");
+    new Span("Login-con", "Login-span", "login-headline", " Login ")
+    this.createInputImgField("Login-con", "username", "Benutzername", "text", "./image/username");
+    this.createInputImgField("Login-con", "email", "Email", "email", "./image/username");
+    this.createInputImgField("Login-con", "password", "Passwort", "password", "./image/username");
+    this.createInputImgField("Login-con", "confirm-password", "Bestätige dein Passwort", "password", "./image/username");
   }
 
   createInputImgField(parent, name, text, type, src) {
@@ -25,5 +26,16 @@ class Login {
     docID(`Login-input-${name}-image`).alt = name;
   }
 
+  renderLogin(){
 
+  }
+
+  checkLogin(){
+
+  }
+
+  createUser(){}
+  updateUsers(){}
+  loadUsers(){}
+  loadCurrentUser(){}
 }

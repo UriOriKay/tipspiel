@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     height: 100svh;
+    gap: 16px;
     justify-content: center;
     align-items: center;
     background-color: rgb(65, 124, 131);
@@ -14,22 +15,47 @@
   height: calc(80vh - 100px);
   width: 80%;
   justify-content: center;
+  align-items: center;
   padding: 16px;
+  gap: 16px;
   background-color: rgb(176, 204, 208);
+  border-radius: 16px;
 }
 
-.login-label{
+.login-headline{
+    display: flex;
+    justify-content: center;
+
+    font-size: 52px;
+    font-weight: 700;
     width: 80%;
+    text-decoration-line: underline;
+    text-underline-offset: 16px;
+    margin-bottom: 24px;
+    text-decoration-color: blue;
 }
+
+
 .login-input{
     align-items: center;
-    width: 80%;
-    margin-bottom: 16px;
+    width: 70%;
+    height: calc(100% - 4px);
+    border: 1px, solid, transparent;
+    border-radius: 8px;
+
 }
 .login-input-con{
 width: 100%;
+height: 50px;
+gap: 16px;
+
 }
-.Login-input-con-outline{
+.login-input-con-outline{
     display: flex;
+    align-items: center;
     width: 100%;
+    height: 80%;
+    border: 1px, solid, black;
+    border-radius: 8px;
+    background-color: white;
 }
