@@ -225,8 +225,8 @@
       "date": "2024-06-15",
       "time": "21:00",
       "stadion": 4,
-      "goalsHome": null,
-      "goalsAway": null,
+      "goalsHome": 2,
+      "goalsAway": 1,
       "tips": {
         "user1": [2, 0],
         "user2": [3, 0],
@@ -376,8 +376,8 @@
       "date": "2024-06-19",
       "time": "18:00",
       "stadion": 5,
-      "goalsHome": null,
-      "goalsAway": null,
+      "goalsHome": 0,
+      "goalsAway": 1,
       "tips": {
         "user1": [null, null],
         "user2": [null, null],
