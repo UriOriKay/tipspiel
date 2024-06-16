@@ -15,6 +15,7 @@ async function init() {
   new Div("body", "main", "main", "");
   const keysArray = Object.keys(data.groups);
   keysArray.forEach((ele) => new Group(ele, data) )
+  new Login();
 }
 
 function loadCss() {
