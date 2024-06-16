@@ -11,12 +11,21 @@
   background-color: rgb(115, 115, 121);
 }
 
-.overview-group {
+.Overview-Group-matches {
   display: grid;
   grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
   background-color: #efefef;
   height: 150px;
 }
+
+.Group-table-con {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
+  background-color: #efefef;
+  height: 150px;
+}
+
+
 
 .game-result {
   font-weight: 900;
@@ -26,5 +35,5 @@
 /* Group  */
 
 .Group-table-con {
-  
+
 }

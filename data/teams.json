@@ -240,12 +240,12 @@
       "date": "2024-06-16",
       "time": "15:00",
       "stadion": 7,
-      "goalsHome": null,
-      "goalsAway": null,
+      "goalsHome": 1,
+      "goalsAway": 2,
       "tips": {
-        "user1": [null, null],
-        "user2": [null, null],
-        "user3": [null, null]
+        "user1": [0, 3],
+        "user2": [1, 2],
+        "user3": [1, 1]
       }
     },
     {

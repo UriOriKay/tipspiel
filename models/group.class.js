@@ -1,13 +1,14 @@
 class Group {
     constructor(nr) {
-        new Div("main", `Overview-Group-${nr}`, "overview-group");
+        new Div("main", `Overview-Group-${nr}`, "Overview-group");
+        new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`)
         this.renderGroupMatches(nr);
         this.renderGroupTable(nr);
     }
 
     renderGroupMatches (nr) {
         data.groups[nr].forEach((ele) => {
-          new Match(`Overview-Group-${nr}`, [ele - 1], teams, games[[ele - 1]]);
+          new Match(`Overview-Group-${nr}-matches`, [ele - 1], teams, games[[ele - 1]]);
         });
       }
 
@@ -24,12 +25,13 @@ class Group {
             };
         });
         new Div(`Overview-Group-${nr}`, `Group-table-con-${nr}`, 'Group-table-con');
+        
         sorted_teams.forEach((team, index) => {
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}`, `Group-table-position`, 1);
+            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}`, `Group-table-position`, index+1);
             new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-name`, `Group-table-team`, data.teams[team.id -1].name);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-played`, `Group-table-team`, team.played);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-goals`, `Group-table-goals`, `${team.goals}:${team.goals}`);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-pkt`, `Group-table-pkt`, team.pkt);
+            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-played`, `Group-table-team`, `${team.played}`);
+            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-goals`, `Group-table-goals`, `${team.goals}:${team.awaygoals}`);
+            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-pkt`, `Group-table-pkt`, `${team.pkt}`);
         })
 
         console.log(sorted_teams)
