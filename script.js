@@ -5,7 +5,7 @@ function docID(id) {
 let data;
 let teams;
 let games;
-let logged = true;
+let logged = false;
 
 async function init() {
   data = await fetchdata();
