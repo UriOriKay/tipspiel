@@ -1,6 +1,6 @@
 class Group {
     constructor(nr) {
-        new Div("main", `Overview-Group-${nr}`, "Overview-group");
+        new Div("app", `Overview-Group-${nr}`, "Overview-group");
         new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`)
         this.renderGroupMatches(nr);
         this.renderGroupTable(nr);
@@ -25,7 +25,7 @@ class Group {
             };
         });
         new Div(`Overview-Group-${nr}`, `Group-table-con-${nr}`, 'Group-table-con');
-        
+
         sorted_teams.forEach((team, index) => {
             new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}`, `Group-table-position`, index+1);
             new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-name`, `Group-table-team`, data.teams[team.id -1].name);

@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.main {
+.app {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 50px;
@@ -10,6 +10,8 @@
   padding: 50px;
   background-color: rgb(115, 115, 121);
 }
+
+/* Group  */
 
 .Overview-Group-matches {
   display: grid;
@@ -25,15 +27,6 @@
   height: 150px;
 }
 
-
-
 .game-result {
   font-weight: 900;
-}
-
-
-/* Group  */
-
-.Group-table-con {
-
 }
