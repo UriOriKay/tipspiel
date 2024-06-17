@@ -1,7 +1,7 @@
 class Match {
   gameResult;
   constructor(parent, gameId, teams, game) {
-    this.gameResult = game["goalsHome"]
+    this.gameResult = !(game["goalsHome"] === null)
       ? `${game["goalsHome"]}:${game["goalsAway"]}`
       : "";
 

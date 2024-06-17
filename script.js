@@ -5,7 +5,7 @@ function docID(id) {
 let data;
 let teams;
 let games;
-let logged = false;
+let logged = true;
 
 async function init() {
   data = await fetchdata();
@@ -22,7 +22,6 @@ async function init() {
     new Div("main", "login", "login", "");
     new Login();
   }
-  
 }
 
 function loadCss() {
@@ -35,3 +34,4 @@ async function fetchdata() {
   const data = await response.json();
   return data;
 }
+

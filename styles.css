@@ -13,10 +13,14 @@
 
 /* Group  */
 .Overview-Group {
+  display: flex;
+  flex-direction: column;
   border: 2px solid black;
+  border-radius: 10px;
   height: fit-content;
-  padding: 8px;
+  padding: 10px;
   background-color: #efefef;
+  gap: 10px;
 }
 
 .Overview-Group-matches {
@@ -24,13 +28,31 @@
   grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
   /* background-color: #efefef; */
   height: 150px;
+  align-items: center;
 }
 
 .Group-table-con {
+  /* background-color: #efefef; */
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 150px;
+  /* border: 2px solid black; */
+}
+
+.Group-table-div:nth-child(odd) {
+  background-color: #bfbfd9;
+}
+
+.Group-table-div {
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
-  /* background-color: #efefef; */
-  height: 150px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.Group-table:nth-child(2) {
+ justify-self: flex-start; 
 }
 
 .game-result {

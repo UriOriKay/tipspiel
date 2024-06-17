@@ -1,33 +1,49 @@
 class Group {
     constructor(nr) {
         new Div("app", `Overview-Group-${nr}`, "Overview-Group");
-        new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`)
+        new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`);
         this.renderGroupMatches(nr);
         this.renderGroupTable(nr);
     }
 
     renderGroupMatches (nr) {
-        // this.renderGroupHeadline(`Overview-Group-${nr}-matches`);
+        this.renderGroupHeadline(`Overview-Group-${nr}-matches`);
         data.groups[nr].forEach((ele) => {
           new Match(`Overview-Group-${nr}-matches`, [ele - 1], teams, games[[ele - 1]]);
         });
       }
     
     renderGroupHeadline(parent) {
-        new Span(parent, `game-hl-home`, `game-home`, `${teams[game["homeTeam"] - 1].name}`);
-        new Span(parent, `game-minus${gameId}`, "game-minus", ":");
-        new Span(parent, `game-away${gameId}`, `game-away`, `${teams[game["awayTeam"] - 1].name}`);
-        new Span(parent, `game-result${gameId}`, "game-result", this.gameResult);
-        new Span(parent, `bet-kay${gameId}`,"bet-kay",game.tips.user1[0] === null ? "" : `${game.tips.user1[0]}:${game.tips.user1[1]}` );
-        new Span(parent, `bet-mina${gameId}`,"bet-mina", game.tips.user2[0] === null ? "" : `${game.tips.user2[0]}:${game.tips.user2[1]}` );
-        new Span(parent, `bet-stefan${gameId}`, "bet-stefan", game.tips.user3[0] === null ? "" : `${game.tips.user3[0]}:${game.tips.user3[1]}`);
+        new Span(parent, `game-hl-home`, `game-home`, `Team 1`);
+        new Span(parent, `game-minus`, "game-minus", " ");
+        new Span(parent, `game-away`, `game-away`, `Team 2`);
+        new Span(parent, `game-result`, "game-result", "Result");
+        new Span(parent, `bet-kay`,"bet-kay","Kay" );
+        new Span(parent, `bet-mina`,"bet-mina", "Mina" );
+        new Span(parent, `bet-stefan`, "bet-stefan", "Stefan");
     }
 
 
     renderGroupTable(nr) {
         let teams = this.groupResults(nr);
         // console.log(teams)
-        let sorted_teams = teams.sort((a, b) => {
+        let sorted_teams = this.sortTeams(teams);
+        new Div(`Overview-Group-${nr}`, `Group-table-con-${nr}`, 'Group-table-con');
+
+        sorted_teams.forEach((team, index) => {
+            new Div(`Group-table-con-${nr}`, `Group-table-${nr}-div-${index}`,`Group-table-div`);
+            new Span(`Group-table-${nr}-div-${index}`, `Group-table-${nr}-position-${index}`, `Group-table`, index+1);
+            new Span(`Group-table-${nr}-div-${index}`, `Group-table-${nr}-position-${index}-name`, `Group-table`, data.teams[team.id -1].name);
+            new Span(`Group-table-${nr}-div-${index}`, `Group-table-${nr}-position-${index}-played`, `Group-table`, `${team.played}`);
+            new Span(`Group-table-${nr}-div-${index}`, `Group-table-${nr}-position-${index}-goals`, `Group-table`, `${team.goals}:${team.awaygoals}`);
+            new Span(`Group-table-${nr}-div-${index}`, `Group-table-${nr}-position-${index}-pkt`, `Group-table`, `${team.pkt}`);
+        })
+
+        console.log(sorted_teams)
+    }
+
+    sortTeams(teams) {
+        return teams.sort((a, b) => {
             if (b.pkt !== a.pkt) {
                 return b.pkt - a.pkt; // Sort by pkt descending
             } else if ((b.goals - b.awaygoals) !== (a.goals - a.awaygoals)) {
@@ -36,17 +52,7 @@ class Group {
                 return b.goals - a.goals; // Sort by goals descending
             };
         });
-        new Div(`Overview-Group-${nr}`, `Group-table-con-${nr}`, 'Group-table-con');
-
-        sorted_teams.forEach((team, index) => {
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}`, `Group-table-position`, index+1);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-name`, `Group-table-team`, data.teams[team.id -1].name);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-played`, `Group-table-team`, `${team.played}`);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-goals`, `Group-table-goals`, `${team.goals}:${team.awaygoals}`);
-            new Span(`Group-table-con-${nr}`, `Group-table-${nr}-position-${index}-pkt`, `Group-table-pkt`, `${team.pkt}`);
-        })
-
-        console.log(sorted_teams)
+        
     }
 
     groupResults(nr) {
