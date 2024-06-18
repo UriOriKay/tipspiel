@@ -21,8 +21,8 @@ class Login {
     this.createInputImgField("Login-con", "confirm-password", "Bestätige dein Passwort", "password", "./image/username");
     new Div("Login-con", "Login-button-con");
     new Button("Login-button-con", "Login-Button-Login","", this.checkLogin, "Login");
-    // new Button("Login-button-con", "Login-Button-Cancel", "");
-    // new Button("Login-button-con", "Login-Button-SignIn", "");
+    new Button("Login-button-con", "Login-Button-Cancel","",  "");
+    new Button("Login-button-con", "Login-Button-SignIn","",  "");
   }
 
   createInputImgField(parent, name, text, type, src) {
@@ -54,8 +54,7 @@ if((userV && emailV && passwordV && confirmPasswordV) != ""){
       return user.mail === emailV
     });
     if(emailList.length === 1 && emailList[0].password === passwordV){
-       loadPageTable("main");
-      logged = true;
+      loadPageTable("main");
       user = emailList[0];
     }else{
       docID(`Login-input-email`).value = "";
@@ -69,17 +68,16 @@ if((userV && emailV && passwordV && confirmPasswordV) != ""){
 
   createUser(){}
   updateUsers(){}
+
  /**
  * Loads users from storage and parses them into an object.
  *
  * @return {Promise<void>} A promise that resolves when the users are loaded and parsed.
  */
-async loadUsers() {
-  // users = JSON.parse(await getItem("users"));
-  users = await getItem("users");
-}
-
+  async loadUsers() {
+    users = await getItem("users");
+  }
+  
   loadCurrentUser(){
-
   }
 }

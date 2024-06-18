@@ -15,12 +15,9 @@ async function init() {
   loadCss();
   new Div("body", "main", "main", "");
   if(user){
-    new Div("main", "app", "app", "");
-    const keysArray = Object.keys(data.groups);
-    keysArray.forEach((ele) => new Group(ele, data) )
+    loadPageTable("main");
   }else{
-    new Div("main", "login", "login", "");
-    new Login();
+    loadPageLogin();
   }
 }
 
@@ -49,4 +46,3 @@ async function fetchdata() {
   new Login();
   user = "";
 }
-
