@@ -315,12 +315,12 @@
       "date": "2024-06-17",
       "time": "21:00",
       "stadion": 8,
-      "goalsHome": null,
-      "goalsAway": null,
+      "goalsHome": 0,
+      "goalsAway": 1,
       "tips": {
-        "user1": [null, null],
-        "user2": [null, null],
-        "user3": [null, null]
+        "user1": [1, 2],
+        "user2": [2, 1],
+        "user3": [0, 2]
       }
     },
     {
@@ -333,9 +333,9 @@
       "goalsHome": null,
       "goalsAway": null,
       "tips": {
-        "user1": [null, null],
-        "user2": [null, null],
-        "user3": [null, null]
+        "user1": [3, 1],
+        "user2": [3, 1],
+        "user3": [1, 1]
       }
     },
     {
@@ -348,9 +348,9 @@
       "goalsHome": null,
       "goalsAway": null,
       "tips": {
-        "user1": [null, null],
-        "user2": [null, null],
-        "user3": [null, null]
+        "user1": [3, 1],
+        "user2": [4, 0],
+        "user3": [2, 3]
       }
     },
     {
