@@ -5,9 +5,9 @@ function docID(id) {
 let data;
 let teams;
 let games;
+let user = true;
 
 async function init() {
-  
   data = await fetchdata();
   teams = data.teams;
   games = data.games;
@@ -15,10 +15,9 @@ async function init() {
   loadCss();
   new Div("body", "main", "main", "");
   if(user){
-    new Div("main", "app", "app", "");
-    const keysArray = Object.keys(data.groups);
-    keysArray.forEach((ele) => new Group(ele, data) )
-  }else{
+    loadPageTable("main")
+  }
+  else{
     new Div("main", "login", "login", "");
     new Login();
   }
@@ -39,7 +38,7 @@ async function fetchdata() {
   docID(id).innerHTML ="";
   new Div("main", "app", "app", "");
   const keysArray = Object.keys(data.groups);
-  keysArray.forEach((ele) => new Group(ele, data) )
+  keysArray.forEach((ele) => new Group(ele));
   new Button("app", "app-button", "", loadPageLogin, "Button");
 }
 

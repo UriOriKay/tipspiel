@@ -1,12 +1,15 @@
 class Group {
     constructor(nr) {
         new Div("app", `Overview-Group-${nr}`, "Overview-Group");
-        new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`);
         this.renderGroupMatches(nr);
-        this.renderGroupTable(nr);
+        if (typeof nr == String) {
+            this.renderGroupTable(nr);
+        }
+        
     }
 
     renderGroupMatches (nr) {
+        new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`);
         this.renderGroupHeadline(`Overview-Group-${nr}-matches`);
         data.groups[nr].forEach((ele) => {
           new Match(`Overview-Group-${nr}-matches`, [ele - 1], teams, games[[ele - 1]]);

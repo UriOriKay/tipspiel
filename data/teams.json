@@ -5,7 +5,11 @@
     "C": [6, 7, 16, 17, 31, 32],
     "D": [5, 10, 20, 21, 29, 30],
     "E": [8, 9, 19, 24, 33, 34],
-    "F": [11, 12, 22, 23, 35, 36]
+    "F": [11, 12, 22, 23, 35, 36],
+    "AF": [37, 38, 39, 40, 41, 42, 43, 44],
+    "VF": [45, 46, 47, 48],
+    "HF": [49, 50],
+    "GF": [51]
   },
   "teams": [
     {
@@ -330,8 +334,8 @@
       "date": "2024-06-18",
       "time": "18:00",
       "stadion": 4,
-      "goalsHome": null,
-      "goalsAway": null,
+      "goalsHome": 3,
+      "goalsAway": 1,
       "tips": {
         "user1": [3, 1],
         "user2": [3, 1],
@@ -708,6 +712,231 @@
       "date": "2024-06-26",
       "time": "21:00",
       "stadion": 6,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 37,
+      "homeTeam": "2A",
+      "awayTeam": "2B",
+      "date": "2024-06-29",
+      "time": "18:00",
+      "stadion": 3,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 38,
+      "homeTeam": "1A",
+      "awayTeam": "2C",
+      "date": "2024-06-29",
+      "time": "21:00",
+      "stadion": 4,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 39,
+      "homeTeam": "1C",
+      "awayTeam": "3D/E/F",
+      "date": "2024-06-30",
+      "time": "18:00",
+      "stadion": 6,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 40,
+      "homeTeam": "1B",
+      "awayTeam": "3 A/D/E/F",
+      "date": "2024-06-30",
+      "time": "21:00",
+      "stadion": 2,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 41,
+      "homeTeam": "2D",
+      "awayTeam": "3E",
+      "date": "2024-07-01",
+      "time": "18:00",
+      "stadion": 8,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 42,
+      "homeTeam": "1F",
+      "awayTeam": "3 A/B/C",
+      "date": "2024-07-01",
+      "time": "21:00",
+      "stadion": 9,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 43,
+      "homeTeam": "1E",
+      "awayTeam": "3 A/B/C/D",
+      "date": "2024-07-02",
+      "time": "18:00",
+      "stadion": 1,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 44,
+      "homeTeam": "1D",
+      "awayTeam": "2F",
+      "date": "2024-07-02",
+      "time": "21:00",
+      "stadion": 10,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 45,
+      "homeTeam": "AF3",
+      "awayTeam": "AF1",
+      "date": "2024-07-05",
+      "time": "18:00",
+      "stadion": 5,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 46,
+      "homeTeam": "AF5",
+      "awayTeam": "AF6",
+      "date": "2024-07-05",
+      "time": "21:00",
+      "stadion": 7,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 47,
+      "homeTeam": "AF4",
+      "awayTeam": "AF2",
+      "date": "2024-07-06",
+      "time": "18:00",
+      "stadion": 8,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 48,
+      "homeTeam": "AF7",
+      "awayTeam": "AF8",
+      "date": "2024-07-06",
+      "time": "21:00",
+      "stadion": 3,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 49,
+      "homeTeam": "VF1",
+      "awayTeam": "VF2",
+      "date": "2024-07-09",
+      "time": "21:00",
+      "stadion": 1,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 50,
+      "homeTeam": "VF3",
+      "awayTeam": "VF4",
+      "date": "2024-07-10",
+      "time": "21:00",
+      "stadion": 4,
+      "goalsHome": null,
+      "goalsAway": null,
+      "tips": {
+        "user1": [null, null],
+        "user2": [null, null],
+        "user3": [null, null]
+      }
+    },
+    {
+      "id": 51,
+      "homeTeam": "HF1",
+      "awayTeam": "HF2",
+      "date": "2024-07-14",
+      "time": "21:00",
+      "stadion": 1,
       "goalsHome": null,
       "goalsAway": null,
       "tips": {
