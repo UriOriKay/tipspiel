@@ -16,8 +16,7 @@ async function init() {
   new Div("body", "main", "main", "");
   if(user){
     loadPageTable("main")
-  }
-  else{
+  }else{
     new Div("main", "login", "login", "");
     new Login();
   }
@@ -48,4 +47,3 @@ async function fetchdata() {
   new Login();
   user = "";
 }
-
