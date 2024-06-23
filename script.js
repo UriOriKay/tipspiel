@@ -17,7 +17,6 @@ async function init() {
   if(user){
     loadPageTable("main")
   }else{
-    new Div("main", "login", "login", "");
     new Login();
   }
 }

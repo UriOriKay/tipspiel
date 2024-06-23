@@ -24,19 +24,15 @@
 }
 
 .Overview-Group-matches {
-  display: grid;
-  grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  /* background-color: #efefef; */
-  height: 150px;
+  /* display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr; */
   align-items: center;
 }
 
 .Group-table-con {
-  /* background-color: #efefef; */
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 150px;
-  /* border: 2px solid black; */
 }
 
 .Group-table-div:nth-child(odd) {
@@ -57,4 +53,16 @@
 
 .game-result {
   font-weight: 900;
+}
+
+/* Matches  */
+
+.game-div, .game-hl-div {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  align-items: center;
+}
+
+.game-div {
+  line-height: 120%;
 }

@@ -2,28 +2,30 @@ class Group {
     constructor(nr) {
         new Div("app", `Overview-Group-${nr}`, "Overview-Group");
         this.renderGroupMatches(nr);
-        if (typeof nr == String) {
+        console.log(nr.length)
+        if (nr.length == 1) {
             this.renderGroupTable(nr);
+            console.log("Table")
         }
-        
     }
 
     renderGroupMatches (nr) {
         new Div(`Overview-Group-${nr}`, `Overview-Group-${nr}-matches`, `Overview-Group-matches`);
-        this.renderGroupHeadline(`Overview-Group-${nr}-matches`);
+        this.renderGroupHeadline(`Overview-Group-${nr}-matches`, nr);
         data.groups[nr].forEach((ele) => {
           new Match(`Overview-Group-${nr}-matches`, [ele - 1], teams, games[[ele - 1]]);
         });
       }
     
-    renderGroupHeadline(parent) {
-        new Span(parent, `game-hl-home`, `game-home`, `Team 1`);
-        new Span(parent, `game-minus`, "game-minus", " ");
-        new Span(parent, `game-away`, `game-away`, `Team 2`);
-        new Span(parent, `game-result`, "game-result", "Result");
-        new Span(parent, `bet-kay`,"bet-kay","Kay" );
-        new Span(parent, `bet-mina`,"bet-mina", "Mina" );
-        new Span(parent, `bet-stefan`, "bet-stefan", "Stefan");
+    renderGroupHeadline(parent, nr) {
+        new Div(parent, `game-hl-div${nr}`, `game-hl-div`)
+        new Span(`game-hl-div${nr}`, `game-hl-home`, `game-home`, `Team 1`);
+        new Span(`game-hl-div${nr}`, `game-minus`, "game-minus", " ");
+        new Span(`game-hl-div${nr}`, `game-away`, `game-away`, `Team 2`);
+        new Span(`game-hl-div${nr}`, `game-result`, "game-result", "Result");
+        new Span(`game-hl-div${nr}`, `bet-kay`,"bet-kay","Kay" );
+        new Span(`game-hl-div${nr}`, `bet-mina`,"bet-mina", "Mina" );
+        new Span(`game-hl-div${nr}`, `bet-stefan`, "bet-stefan", "Stefan");
     }
 
 
