@@ -63,6 +63,11 @@
   align-items: center;
 }
 
+.game-hl-div {
+  background-color: #bfbfd9;
+  line-height: 150%;
+}
+
 .game-div {
-  line-height: 120%;
+  line-height: 150%;
 }
